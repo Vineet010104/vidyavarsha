@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #1dbf73, #3acb6f); /* Green gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    animation: slideIn 0.6s ease-out;
+}
+
+h2 {
+    color: #2d2d2d;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: #3b3b3b;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #1dbf73; /* Focused input with green */
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #1dbf73; /* Primary green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #28a745; /* Darker green when hovering */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.error-message {
+    margin-top: 15px;
+    color: #ff4d4d;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
